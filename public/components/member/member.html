@@ -1,0 +1,24 @@
+<div class="indexContainer">
+	<div>个人中心</div>
+	<p>昵称:{{userInfo.username}}</p>
+	<img ng-src="/portrait/{{userInfo.avatar}}" alt="" width="100">
+	<p>
+		<form action="/doAvater" method='post' encType="multipart/form-data">
+			<label for="">修改头像</label>
+			<input type="file" name="upload" />
+			<input type="submit" value="上传头像">
+		</form>
+	</p>
+	<h4>发表留言</h4>
+	<div class="note">
+		<p>
+			<label for="">标题</label>
+			<input type="text" name="title" ng-model="note.title">
+		</p>
+		<p>
+			<label for="">内容</label>
+			<input type="text" name="content" ng-model="note.content">
+		</p>
+		<button ng-click="submit()">提交</button>
+	</div>
+</div>

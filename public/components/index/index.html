@@ -1,0 +1,15 @@
+<div class="indexContainer">
+	<p>我是首页</p>
+	<h2>所有留言</h2>
+	<ul class="note clearfix">
+		<li ng-repeat="item in list">
+			<p>
+				<img src="/portrait/{{item.avatar}}" alt="" width="25" height="25"> {{item.time}} {{item.username}}说：
+			</p>
+			<h4>{{item.title}}</h4>
+			<div class="content">
+				{{item.content}}
+			</div>
+		</li>
+	</ul>
+</div>
